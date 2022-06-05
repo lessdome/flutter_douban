@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_douban/views/mail/main.dart';
+import 'package:flutter_douban/views/main/main.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -13,7 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "豆瓣",
       theme: ThemeData(
-          primarySwatch: Colors.blue, splashColor: Colors.transparent),
+          primarySwatch: Colors.green,
+          splashColor: Colors.transparent,
+          highlightColor: Colors.transparent),
       home: const MainView(),
     );
   }
