@@ -7,9 +7,7 @@ class BottomBarItem extends BottomNavigationBarItem {
               iconName,
               width: 32,
             ),
-            activeIcon: Image.asset(
-              activeIcon,
-              width: 32,
-            ),
+            activeIcon:
+                Image.asset(activeIcon, width: 32, gaplessPlayback: true),
             label: title);
 }

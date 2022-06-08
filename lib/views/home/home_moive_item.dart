@@ -1,5 +1,7 @@
 // ignore_for_file: sized_box_for_whitespace
 
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_douban/widgets/dashed_line.dart';
 import 'package:flutter_douban/widgets/star_rating.dart';
@@ -55,21 +57,27 @@ class HomeMoiveItem extends StatelessWidget {
   // 内容的布局
   Widget buildContent() {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         buildContentImage(),
         const SizedBox(
           width: 8,
         ),
-        buildContentInfo(),
-        const SizedBox(
-          width: 8,
-        ),
-        buildContentLine(),
-        const SizedBox(
-          width: 8,
-        ),
-        buildContentWish(),
+        Expanded(
+            child: IntrinsicHeight(
+          child: Row(children: [
+            buildContentInfo(),
+            const SizedBox(
+              width: 8,
+            ),
+            buildContentLine(),
+            const SizedBox(
+              width: 8,
+            ),
+            buildContentWish(),
+          ]),
+        ))
       ],
     );
   }
@@ -156,15 +164,12 @@ class HomeMoiveItem extends StatelessWidget {
 
   // 内容分割线
   Widget buildContentLine() {
-    return Container(
-      height: 100,
-      child: const DashedLine(
-        axis: Axis.vertical,
-        dashedWidth: 0.3,
-        dashedHeight: 4,
-        count: 14,
-        color: Color.fromRGBO(235, 170, 60, 1),
-      ),
+    return const DashedLine(
+      axis: Axis.vertical,
+      dashedWidth: 0.3,
+      dashedHeight: 4,
+      count: 14,
+      color: Color.fromRGBO(235, 170, 60, 1),
     );
   }
 

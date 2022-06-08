@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_douban/views/main/main.dart';
 
-import 'theme/primary_color.dart';
-
 void main(List<String> args) {
   runApp(const MyApp());
 }
@@ -15,8 +13,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "豆瓣",
       theme: ThemeData(
-          primaryColor: PrimaryColor.white,
-          primarySwatch: PrimaryColor.white,
+          primaryColor: Colors.green,
+          primarySwatch: Colors.green,
           splashColor: Colors.transparent,
           highlightColor: Colors.transparent),
       home: const MainView(),
