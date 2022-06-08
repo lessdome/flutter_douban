@@ -20,7 +20,7 @@ List<BottomBarItem> bottomItems = [
 List<Widget> contentPages = [
   const Home(),
   const Subject(),
-  const Home(),
-  const Home(),
-  const Home()
+  const Subject(),
+  const Subject(),
+  const Subject()
 ];
