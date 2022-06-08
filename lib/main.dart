@@ -15,11 +15,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "豆瓣",
       theme: ThemeData(
-        primaryColor: PrimaryColor.white,
-        primarySwatch: PrimaryColor.white,
-        // splashColor: Colors.transparent,
-        // highlightColor: Colors.transparent
-      ),
+          primaryColor: PrimaryColor.white,
+          primarySwatch: PrimaryColor.white,
+          splashColor: Colors.transparent,
+          highlightColor: Colors.transparent),
       home: const MainView(),
       debugShowCheckedModeBanner: false,
     );
